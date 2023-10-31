@@ -5,7 +5,7 @@ describe.skip('Primeiro teste da aplicação',()=>{
     expect(1).toBe(1)
     })
 })
-describe.skip('Cadastro de filmes',()=>{
+describe.skip('Cadastro de filmes Express',()=>{
     test('Espero que o filme seja cadastrado',async ()=>{
         const filme = {
             id:1,
