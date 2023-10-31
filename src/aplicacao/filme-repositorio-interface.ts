@@ -1,5 +1,11 @@
 export default interface FilmeRepositorioInterface {
-    salvar(): Promise<any>;
-    listar():  Promise<any>;
-    buscarPorId(id: number): Promise<any>;
+    salvar(Input:FilmeDTO): Promise<FilmeDTO>;
+    listar():  Promise<FilmeDTO[]>;
+    buscarPorId(id: number): Promise<FilmeDTO>;
+}
+type FilmeDTO = {
+    id:number,
+    titulo:string,
+    descricao:string,
+    imagem:string
 }
