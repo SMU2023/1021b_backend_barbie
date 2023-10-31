@@ -13,14 +13,14 @@ export default class SalvaFilme {
   }
   
   type Input = {
-    id: number; // Added id to the input type
+    id: number; 
     titulo: string;
     descricao: string;
     imagem: string;
   };
   
   type Output = {
-    id: number; // Added id to the output type
+    id: number; 
     titulo: string;
     descricao: string;
     imagem: string;
