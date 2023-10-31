@@ -11,6 +11,7 @@ export default class BancoEmMemoria{
     }
     public salvar(filme:Filme){
         this.filmes.push(filme)
+        return filme
     }
     public listar(){
         return this.filmes
