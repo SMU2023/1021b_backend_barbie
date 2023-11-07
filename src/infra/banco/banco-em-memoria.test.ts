@@ -3,7 +3,7 @@ import {describe, expect, it, test} from 'vitest'
 import BancoEmMemoria from './banco-em-memoria'
 
 describe('BancoEmMemoria', () => {
-    test('deve salvar um filme em memória',  async() => {
+    test('deve salvar um filme em memória', async () => {
         //Entrada de dados
         const filme = {
             id:1,
@@ -13,13 +13,13 @@ describe('BancoEmMemoria', () => {
         }
         //Processamento
         const bancoEmMemoria = new BancoEmMemoria()
-         await bancoEmMemoria.salvar(filme)
+        await bancoEmMemoria.salvar(filme)
 
         //Saída
         expect(bancoEmMemoria.filmes).toEqual([filme])
         expect(bancoEmMemoria.filmes.length).toBe(1)
     })
-    test('deve listar os filmes salvos em memória', async () => {
+    test('deve listar os filmes salvos em memória',async () => {
         //Entrada
         const filme = {
             id:1,
@@ -34,7 +34,7 @@ describe('BancoEmMemoria', () => {
         //saída
         expect(resultado).toEqual([filme])
     })
-    test('deve buscar um filme pelo id', async () => {
+    test('deve buscar um filme pelo id', async() => {
         //entrada
         const filme1 = {
             id:1,
@@ -54,6 +54,7 @@ describe('BancoEmMemoria', () => {
         bancoEmMemoria.filmes.push(filme2)
 
         const resultado = await bancoEmMemoria.buscarPorId(1)
+
         //saída
         expect(resultado).toEqual(filme1)
         expect(bancoEmMemoria.filmes).toHaveLength(2)
