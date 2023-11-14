@@ -1,11 +1,16 @@
-import {describe,test, expect} from 'vitest'
-import {BancoMongoDB} from './banco-mongodb'
+import {describe,test, expect, beforeEach} from 'vitest'
+import BancoMongoDB from './banco-mongodb'
 
 describe('BancoMongoDB teste', () => {
     const bancoMongoDB = new BancoMongoDB()
+   beforeEach(async () => {
+    await bancoMongoDB.filmeModelo.deleteMany({})
+   })
+
     test('BancoMongoDB', () => {
         expect(bancoMongoDB).toBeDefined()
     })
+
     test('deve salvar um filme', async () => {
         const filme = {
             id: 1,
