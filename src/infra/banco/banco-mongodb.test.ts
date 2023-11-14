@@ -18,7 +18,23 @@ describe('BancoMongoDB teste', () => {
             descricao: 'Filme de máfia',
             imagem: 'fotofilme.jpg'
         }
+
+       
+        const result = await bancoMongoDB.salvar(filme)
+        expect(result).toEqual(filme)
+    })
+
+    test('deve salvar um filme', async () => {
+        const filme = {
+            id: 2,
+            titulo: 'Barbie',
+            descricao: 'Filme da barbie',
+            imagem: 'fotofilme.jpg'
+        }
+
+       
         const result = await bancoMongoDB.salvar(filme)
         expect(result).toEqual(filme)
     })
 })
+

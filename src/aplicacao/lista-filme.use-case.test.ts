@@ -13,8 +13,8 @@ describe("ListaFilme", () => {
         },
         {
             id: 2,
-            titulo: "O Poderoso Chefão 2",
-            descricao: "Filme de máfia",
+            titulo: "Barbie",
+            descricao: "Filme da barbie",
             imagem: "fotofilme.jpg"
         
         }]
@@ -33,8 +33,8 @@ describe("ListaFilme", () => {
         });
         expect(filmes[1]).toEqual({
             id: 2,
-            titulo: "O Poderoso Chefão 2",
-            descricao: "Filme de máfia",
+            titulo: "Barbie",
+            descricao: "Filme da barbie",
             imagem: "fotofilme.jpg"
         });
     });
