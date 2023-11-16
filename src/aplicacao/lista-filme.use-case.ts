@@ -1,3 +1,4 @@
+
 import FilmeRepositorioInterface from "./filme-repositorio-interface";
 
 export default class ListaFilme{
@@ -7,6 +8,6 @@ export default class ListaFilme{
     ){}
     //executar
     public async executar(){
-        return this.filmeRepositorio.listar()
+        return await this.filmeRepositorio.listar()
     }
 }
