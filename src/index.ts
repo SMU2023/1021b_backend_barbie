@@ -1,9 +1,14 @@
 import express from 'express'
+import cors from 'cors'
 const app = express()
+const cors = require('cors')
 app.use(express.json())
+app.use(cors())
+
 import ListaFilme from './aplicacao/lista-filme.use-case'
 import BancoMongoDB from './infra/banco/banco-mongodb'
 const bancoMongoDB = new BancoMongoDB()
+
 app.get('/filmes',async (req,res)=>{
     //usem o listarFilme Usecase para listar os filmes
     const listaFilme = new ListaFilme(bancoMongoDB)
