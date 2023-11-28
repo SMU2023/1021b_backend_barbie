@@ -14,8 +14,10 @@ describe('BancoMongoDB teste', () => {
             id: 1,
             titulo: 'O Poderoso Chefão',
             descricao: 'Filme de máfia',
-            imagem: 'fotofilme.jpg'
+            imagem: 'fotofilme.jpg',
+
         }
+
         const result = await bancoMongoDB.salvar(filme)
         expect(result).toEqual(filme)
     })

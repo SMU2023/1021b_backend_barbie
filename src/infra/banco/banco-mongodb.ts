@@ -39,7 +39,7 @@ export default class BancoMongoDB implements  FilmeRepositorioInterface {
     const listaFilme = await this.filmeModelo.find()
     return listaFilme.map((filme:FilmeDTO) => {
       return {
-        id: filme._id,
+        _id: filme._id,
         titulo: filme.titulo,
         descricao: filme.descricao,
         imagem: filme.imagem

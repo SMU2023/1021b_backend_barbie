@@ -44,7 +44,7 @@ describe('BancoEmMemoria', () => {
         }
         const filme2 = {
             id:2,
-            titulo:'Filme 1',
+            titulo:'Filme ',
             descricao:'Descrição do filme 1',
             imagem:'imagem.jpg'
         }
