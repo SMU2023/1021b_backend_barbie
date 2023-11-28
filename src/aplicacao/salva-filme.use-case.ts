@@ -1,17 +1,18 @@
-import FilmeRepositorioInterface from './filme-repositorio-interface'
-export default class SalvaFilme{
-    private repositorio: FilmeRepositorioInterface 
-    constructor(repositorio:any){
+import FilmeRepositorioInterface from "./filme-repositorio-interface"
+
+export default class SalvaFilme {
+    private repositorio:FilmeRepositorioInterface
+    constructor(repositorio:any) {
         this.repositorio = repositorio
     }
-    public async execute(input:Input):Promise<Output>{
-        const {id, titulo,descricao,imagem} = input
-        const result = await this.repositorio.salvar({id, titulo,descricao,imagem})
+    public async execute(input:Input):Promise<Output> {
+        const {id,titulo,descricao,imagem} = input
+        const result =  await this.repositorio.salvar({id,titulo,descricao,imagem})
         const filmeSalvo = {
-            id: result.id,
-            titulo: result.titulo,
-            descricao: result.descricao,
-            imagem: result.imagem
+            id:result.id,
+            titulo:result.titulo,
+            descricao:result.descricao,
+            imagem:result.imagem
         }
         return filmeSalvo
     }
@@ -23,6 +24,7 @@ type Input = {
     descricao:string,
     imagem:string
 }
+
 type Output = {
     id:number,
     titulo:string,
